@@ -9,12 +9,12 @@ const Index = () => {
   return (
     <div className="flex min-h-screen bg-background">
       <Sidebar />
-      <div className="flex-1 ml-64">
+      <div className="flex-1 ml-[260px]">
         <DashboardHeader />
-        <main className="p-8 space-y-6">
+        <main className="p-8 space-y-6 max-w-[1200px]">
           <WelcomeBanner />
           <StatsCards />
-          <div className="grid grid-cols-[1fr_320px] gap-6">
+          <div className="grid grid-cols-[1fr_300px] gap-6">
             <RecentActivity />
             <LearningGoals />
           </div>
