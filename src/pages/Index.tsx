@@ -1,11 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Sidebar from "@/components/Sidebar";
+import DashboardHeader from "@/components/DashboardHeader";
+import WelcomeBanner from "@/components/WelcomeBanner";
+import StatsCards from "@/components/StatsCards";
+import RecentActivity from "@/components/RecentActivity";
+import LearningGoals from "@/components/LearningGoals";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="flex min-h-screen bg-background">
+      <Sidebar />
+      <div className="flex-1 ml-64">
+        <DashboardHeader />
+        <main className="p-8 space-y-6">
+          <WelcomeBanner />
+          <StatsCards />
+          <div className="grid grid-cols-[1fr_320px] gap-6">
+            <RecentActivity />
+            <LearningGoals />
+          </div>
+        </main>
       </div>
     </div>
   );
